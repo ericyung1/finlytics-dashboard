@@ -22,7 +22,7 @@ const Row3 = () => {
       const allowedCategories = ["salaries", "supplies", "services"];
   
       return Object.entries(categoryMap)
-        .filter(([key]) => allowedCategories.includes(key)) // ← only those 3
+        .filter(([key]) => allowedCategories.includes(key))
         .map(([key, value]) => {
           return [
             { name: key, value: value },
@@ -127,10 +127,10 @@ const Row3 = () => {
             color: palette.grey[300],
             border: "none",
           },
-          "& .MuiDataGrid-cell": {
+          "& .MuiDataGrid-cell.MuiDataGrid-cell": {
             borderBottom: `1px solid ${palette.grey[800]} !important`,
           },
-          "& .MuiDataGrid-columnHeaders": {
+          "& .MuiDataGrid-columnHeaders.MuiDataGrid-columnHeaders": {
             borderBottom: `1px solid ${palette.grey[800]} !important`,
           },
           "& .MuiDataGrid-columnSeparator": {
@@ -152,7 +152,10 @@ const Row3 = () => {
       <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
         {pieChartData?.map((data, i) => (
           <Box key={`${data[0].name}-${i}`}>
-            <PieChart width={110} height={100}>
+            <PieChart
+              width={110}
+              height={80}
+            >
               <Pie
                 stroke="none"
                 data={data}
