@@ -16,23 +16,21 @@ const Row3 = () => {
 
   const pieChartData = useMemo(() => {
     if (kpiData) {
+      const categoryMap = kpiData[0].expensesByCategory;
       const totalExpenses = kpiData[0].totalExpenses;
-      return Object.entries(kpiData[0].expensesByCategory).map(
-        ([key, value]) => {
+  
+      const allowedCategories = ["salaries", "supplies", "services"];
+  
+      return Object.entries(categoryMap)
+        .filter(([key]) => allowedCategories.includes(key)) // ← only those 3
+        .map(([key, value]) => {
           return [
-            {
-              name: key,
-              value: value,
-            },
-            {
-              name: `${key} of Total`,
-              value: totalExpenses - value,
-            },
+            { name: key, value: value },
+            { name: `${key} of Total`, value: totalExpenses - value },
           ];
-        }
-      );
+        });
     }
-  }, [kpiData]);
+  }, [kpiData]);  
 
   const productColumns = [
     {
