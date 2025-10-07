@@ -92,15 +92,38 @@ const Row3 = () => {
           "& .MuiDataGrid-root": {
             color: palette.grey[300],
             border: "none",
+            backgroundColor: "transparent",
           },
           "& .MuiDataGrid-cell": {
             borderBottom: `1px solid ${palette.grey[800]} !important`,
           },
           "& .MuiDataGrid-columnHeaders": {
             borderBottom: `1px solid ${palette.grey[800]} !important`,
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-columnHeadersInner": {
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-columnHeader": {
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-filler": {
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-scrollbarFiller": {
+            backgroundColor: "transparent !important",
           },
           "& .MuiDataGrid-columnSeparator": {
             visibility: "hidden",
+          },
+          "& .MuiDataGrid-row": {
+            backgroundColor: "transparent",
+          },
+          "& .MuiDataGrid-row:hover": {
+            backgroundColor: `${palette.grey[800]} !important`,
+          },
+          "& .MuiDataGrid-virtualScroller": {
+            marginTop: "0 !important",
           },
         }}
       >
@@ -126,15 +149,38 @@ const Row3 = () => {
           "& .MuiDataGrid-root": {
             color: palette.grey[300],
             border: "none",
+            backgroundColor: "transparent",
           },
           "& .MuiDataGrid-cell.MuiDataGrid-cell": {
             borderBottom: `1px solid ${palette.grey[800]} !important`,
           },
           "& .MuiDataGrid-columnHeaders.MuiDataGrid-columnHeaders": {
             borderBottom: `1px solid ${palette.grey[800]} !important`,
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-columnHeadersInner": {
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-columnHeader": {
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-filler": {
+            backgroundColor: "transparent !important",
+          },
+          "& .MuiDataGrid-scrollbarFiller": {
+            backgroundColor: "transparent !important",
           },
           "& .MuiDataGrid-columnSeparator": {
             visibility: "hidden",
+          },
+          "& .MuiDataGrid-row": {
+            backgroundColor: "transparent",
+          },
+          "& .MuiDataGrid-row:hover": {
+            backgroundColor: `${palette.grey[800]} !important`,
+          },
+          "& .MuiDataGrid-virtualScroller": {
+            marginTop: "0 !important",
           },
         }}
       >
