@@ -1,9 +1,9 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import FlexBetween from './FlexBetween';
 import { Box, Typography, useTheme } from '@mui/material';
 
 type Props = {
-    icon?: React.ReactNode;
+    icon?: ReactNode;
     subtitle?: string;
     title: string;
     sideText: string;

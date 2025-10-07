@@ -3,7 +3,7 @@ import DashboardBox from '@/components/DashboardBox'
 import FlexBetween from '@/components/FlexBetween'
 import { useGetKpisQuery, useGetProductsQuery } from '@/state/api'
 import { Box, Typography, useTheme } from '@mui/material'
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts'
 
 const pieData = [
@@ -158,7 +158,7 @@ const Row2 = () => {
             style={{ fontSize: "10px" }}
             tickFormatter={(v) => `$${v}`}
           />
-          <ZAxis type="number" range={[20]} />
+          <ZAxis type="number" range={[20, 20]} />
           <Tooltip formatter={(v) => `$${v}`} />
           <Scatter name="Product Expense Ratio" data={productExpenseData} fill={palette.tertiary[500]} />
         </ScatterChart>

@@ -22,7 +22,7 @@ const TransactionSchema = new Schema(
             },
         ],
     },
-    { timeStamps: true, toJSON: { getters: true }}
+    { timestamps: true, toJSON: { getters: true }}
 );
 
 const Transaction = mongoose.model("Transaction", TransactionSchema);

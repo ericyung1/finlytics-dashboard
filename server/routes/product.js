@@ -1,16 +1,8 @@
 import express from "express";
-import Product from "../models/Product.js";
+import { getProducts } from "../controllers/productController.js";
 
 const router = express.Router();
 
-router.get("/products", async (req, res) => {
-    try {
-        const products = await Product.find();
-        res.status(200).json(products);
-    }
-    catch (error) {
-        res.status(404).json({ message: error.message });
-    }
-});
+router.get("/products", getProducts);
 
 export default router;

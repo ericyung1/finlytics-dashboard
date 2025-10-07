@@ -2,7 +2,7 @@ import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery } from "@/state/api";
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   CartesianGrid,
   Label,
@@ -48,7 +48,7 @@ const Predictions = () => {
           <Typography variant="h3">Revenue and Predictions</Typography>
           <Typography variant="h6">
             charted revenue and predicted revenue based on a simple linear
-            regresssion model
+            regression model
           </Typography>
         </Box>
         <Button
